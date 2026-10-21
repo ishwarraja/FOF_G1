@@ -1,0 +1,6 @@
+{
+  "name": "Fate of Fighters: The Manufactured Collapse",
+  "description": "2.5D fighting game & live orchestration web console featuring Path A WebGL 3D perspective arena, 60 FPS fighting engine with 2D gameplay precision, FOF v2.0.0 roster (Arjun, Steele, Elena, Valeria Unit-0, Victor), 4-Act Story Mode, Dojo lab, and Go/Redis live matchmaking orchestration console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

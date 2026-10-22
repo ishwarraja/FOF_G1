@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Dark Gradient -->
+    <radialGradient id="mayaBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2e0854" />
+      <stop offset="50%" stop-color="#120524" />
+      <stop offset="100%" stop-color="#05020a" />
+    </radialGradient>
+
+    <!-- Neon Fuchsia Glow Filter -->
+    <filter id="neonFuchsia" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Emerald Hacker Glow -->
+    <filter id="hackerEmerald" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blurG" />
+      <feMerge>
+        <feMergeNode in="blurG" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Skin Tone Gradient (Warm golden athletic) -->
+    <linearGradient id="mayaSkin" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="45%" stop-color="#fbcfe8" />
+      <stop offset="85%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#be185d" />
+    </linearGradient>
+
+    <!-- Hair Jet Black with Fuchsia Highlights -->
+    <linearGradient id="mayaHair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="40%" stop-color="#09090b" />
+      <stop offset="80%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <!-- Tactical Jacket Leather Gradient -->
+    <linearGradient id="jacketLeather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f3f46" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Atmospheric Arena Background -->
+  <rect width="512" height="512" fill="url(#mayaBg)" />
+
+  <!-- Holographic Grid / Hex Data Network -->
+  <g opacity="0.18" stroke="#d946ef" stroke-width="1.2" fill="none">
+    <polygon points="256,50 290,70 290,110 256,130 222,110 222,70" />
+    <polygon points="330,90 364,110 364,150 330,170 296,150 296,110" />
+    <polygon points="182,90 216,110 216,150 182,170 148,150 148,110" />
+    <line x1="0" y1="256" x2="512" y2="256" stroke-dasharray="10,6" />
+    <line x1="256" y1="0" x2="256" y2="512" stroke-dasharray="10,6" />
+    <circle cx="256" cy="240" r="185" stroke-dasharray="6,5" stroke="#10b981" opacity="0.4" />
+  </g>
+
+  <!-- Glowing Holographic Glitch Rings -->
+  <circle cx="256" cy="235" r="160" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="30 15 10 20" opacity="0.6" filter="url(#neonFuchsia)" />
+  <circle cx="256" cy="235" r="145" fill="none" stroke="#10b981" stroke-width="1.2" stroke-dasharray="12 8 4 15" opacity="0.5" filter="url(#hackerEmerald)" />
+
+  <!-- Tactical Hoodie & Combat Jacket -->
+  <g id="jacket">
+    <!-- Inner High Collar Shirt -->
+    <path d="M 180 370 L 160 512 L 352 512 L 332 370 Z" fill="#09090b" />
+    <!-- High-Tech Neon Zipper/Conduit -->
+    <path d="M 256 360 L 256 512" stroke="#10b981" stroke-width="3" filter="url(#hackerEmerald)" />
+    <!-- Tactical Jacket Shoulders -->
+    <path d="M 80 445 L 180 370 L 170 512 L 70 512 Z" fill="url(#jacketLeather)" stroke="#27272a" stroke-width="2" />
+    <path d="M 432 445 L 332 370 L 342 512 L 442 512 Z" fill="url(#jacketLeather)" stroke="#27272a" stroke-width="2" />
+    <!-- Neon Shoulder Harness Lines -->
+    <path d="M 120 440 L 195 385 L 210 512" stroke="#d946ef" stroke-width="2.5" filter="url(#neonFuchsia)" />
+    <path d="M 392 440 L 317 385 L 302 512" stroke="#d946ef" stroke-width="2.5" filter="url(#neonFuchsia)" />
+    <!-- High Collar Trim -->
+    <path d="M 190 325 L 256 370 L 322 325 L 305 305 L 207 305 Z" fill="#18181b" stroke="#701a75" stroke-width="2" />
+  </g>
+
+  <!-- Athletic Neck with Cyber Choker -->
+  <path d="M 226 270 L 226 335 L 286 335 L 286 270 Z" fill="url(#mayaSkin)" />
+  <!-- Data Port Choker with Pulsing Emerald LED -->
+  <rect x="220" y="295" width="72" height="14" rx="3" fill="#18181b" stroke="#d946ef" stroke-width="1.5" />
+  <circle cx="256" cy="302" r="3.5" fill="#10b981" filter="url(#hackerEmerald)" />
+
+  <!-- Head Base & Sharp Jawline -->
+  <g id="face">
+    <path d="M 192 175 C 190 238 206 285 256 308 C 306 285 322 238 320 175 C 320 125 298 108 256 108 C 214 108 192 125 192 175 Z"
+          fill="url(#mayaSkin)" stroke="#f472b6" stroke-width="1.2" />
+
+    <!-- Intense Eyes (Sharp Street Fighter 6 Aesthetic) -->
+    <!-- Left Eye -->
+    <ellipse cx="225" cy="190" rx="16" ry="8" fill="#ffffff" />
+    <circle cx="227" cy="190" r="6" fill="#09090b" />
+    <circle cx="227" cy="190" r="3.5" fill="#d946ef" />
+    <circle cx="228" cy="188" r="1.5" fill="#ffffff" />
+    <!-- Right Eye -->
+    <ellipse cx="287" cy="190" rx="16" ry="8" fill="#ffffff" />
+    <circle cx="285" cy="190" r="6" fill="#09090b" />
+    <circle cx="285" cy="190" r="3.5" fill="#d946ef" />
+    <circle cx="286" cy="188" r="1.5" fill="#ffffff" />
+
+    <!-- Sharp Eyebrows -->
+    <path d="M 205 174 Q 224 167 242 178" stroke="#18181b" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 307 174 Q 288 167 270 178" stroke="#18181b" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Nose Contour -->
+    <path d="M 256 182 L 252 222 L 258 224" stroke="#be185d" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Confident Warrior Smirk -->
+    <path d="M 240 248 Q 256 256 274 246" stroke="#9d174d" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 244 252 Q 256 258 270 252" stroke="#be185d" stroke-width="1.5" fill="none" opacity="0.7" />
+
+    <!-- Cybernetic Hacker Visor Decal on Left Cheek -->
+    <path d="M 198 210 L 214 218 L 208 230" stroke="#10b981" stroke-width="1.5" fill="none" filter="url(#hackerEmerald)" />
+  </g>
+
+  <!-- Braided Punk Cyber Hair with Radiant Fuchsia Highlights -->
+  <g id="hair">
+    <!-- Crown Volume -->
+    <path d="M 180 160 C 172 80 205 45 256 45 C 310 45 342 80 332 160 C 315 110 295 90 256 95 C 218 90 198 110 180 160 Z"
+          fill="url(#mayaHair)" />
+    <!-- Dynamic Forward Side Bangs -->
+    <path d="M 185 140 C 170 180 175 225 188 255 C 192 235 194 200 198 165 Z" fill="url(#mayaHair)" />
+    <path d="M 327 140 C 342 180 337 225 324 255 C 320 235 318 200 314 165 Z" fill="url(#mayaHair)" />
+    <!-- High Ponytail / Top Knot Fan with Emerald Wraps -->
+    <path d="M 230 65 L 256 20 L 282 65 Z" fill="url(#mayaHair)" />
+    <rect x="240" y="55" width="32" height="10" rx="3" fill="#10b981" filter="url(#hackerEmerald)" />
+    <!-- Glowing Fuchsia Hair Streak -->
+    <path d="M 245 75 Q 260 120 270 145" stroke="#f43f5e" stroke-width="3.5" fill="none" stroke-linecap="round" filter="url(#neonFuchsia)" />
+  </g>
+
+  <!-- Ambient Light Particle Accents -->
+  <circle cx="140" cy="180" r="2.5" fill="#d946ef" filter="url(#neonFuchsia)" />
+  <circle cx="370" cy="190" r="3" fill="#10b981" filter="url(#hackerEmerald)" />
+  <circle cx="210" cy="90" r="2" fill="#d946ef" />
+  <circle cx="310" cy="80" r="2.5" fill="#10b981" />
+
+  <!-- Outer Neon Border (Clean AAA Fighting Game Portrait Card) -->
+  <rect x="3" y="3" width="506" height="506" rx="20" fill="none" stroke="#d946ef" stroke-width="3" opacity="0.85" filter="url(#neonFuchsia)" />
+</svg>

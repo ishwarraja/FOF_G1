@@ -1,0 +1,512 @@
+import fs from 'fs';
+import path from 'path';
+import zlib from 'zlib';
+
+/**
+ * Generates the master Character Design Reference for Arjun (Fate of Fighters).
+ * 
+ * Specifications:
+ * - Full-body, 3/4 view facing right
+ * - Neutral fighting guard with separated limbs, torso, and legs
+ * - Believable human athletic proportions (182cm, ~7.5 heads)
+ * - Deep indigo sleeveless jacket over muted rust-red shirt
+ * - Practical charcoal combat cargo trousers with reinforced knees
+ * - Off-white cloth wrist wraps & sturdy brown fighting boots
+ * - Solid neutral studio backdrop (no scenery, text, logos, or weapons)
+ */
+
+function generateArjunSvg(): string {
+  const width = 1200;
+  const height = 1600;
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">
+  <defs>
+    <!-- Studio Neutral Background Gradient -->
+    <radialGradient id="studioBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#38383e" />
+      <stop offset="55%" stop-color="#26262a" />
+      <stop offset="100%" stop-color="#18181b" />
+    </radialGradient>
+
+    <!-- Studio Key & Rim Light Gradients -->
+    <linearGradient id="skinBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#935b37" />
+      <stop offset="40%" stop-color="#b67a4e" />
+      <stop offset="85%" stop-color="#c98d60" />
+      <stop offset="100%" stop-color="#e2aa7f" />
+    </linearGradient>
+
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#804b2c" />
+      <stop offset="100%" stop-color="#60341b" />
+    </linearGradient>
+
+    <!-- Deep Indigo Sleeveless Jacket (Denim/Duck Canvas) -->
+    <linearGradient id="jacketMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24344d" />
+      <stop offset="45%" stop-color="#1b283d" />
+      <stop offset="85%" stop-color="#141e2e" />
+      <stop offset="100%" stop-color="#0f1622" />
+    </linearGradient>
+
+    <linearGradient id="jacketHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#32496c" />
+      <stop offset="100%" stop-color="#1c293e" />
+    </linearGradient>
+
+    <!-- Muted Rust-Red Shirt -->
+    <linearGradient id="shirtRust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a34336" />
+      <stop offset="60%" stop-color="#8a3429" />
+      <stop offset="100%" stop-color="#6e251c" />
+    </linearGradient>
+
+    <!-- Practical Charcoal Combat Trousers -->
+    <linearGradient id="trouserCharcoal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3e4147" />
+      <stop offset="50%" stop-color="#2f3136" />
+      <stop offset="100%" stop-color="#202226" />
+    </linearGradient>
+
+    <linearGradient id="trouserShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282a2e" />
+      <stop offset="100%" stop-color="#161719" />
+    </linearGradient>
+
+    <!-- Cloth Wrist Wraps (Unbleached Raw Cotton) -->
+    <linearGradient id="clothWrap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0ebe1" />
+      <stop offset="50%" stop-color="#d6cebf" />
+      <stop offset="100%" stop-color="#b5ab99" />
+    </linearGradient>
+
+    <!-- Sturdy Leather Combat Boots -->
+    <linearGradient id="bootLeather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a3325" />
+      <stop offset="60%" stop-color="#332217" />
+      <stop offset="100%" stop-color="#1e140d" />
+    </linearGradient>
+
+    <linearGradient id="bootSole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#262729" />
+      <stop offset="100%" stop-color="#121314" />
+    </linearGradient>
+
+    <!-- Ground Contact Soft Shadow -->
+    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#090a0c" stop-opacity="0.75" />
+      <stop offset="45%" stop-color="#090a0c" stop-opacity="0.45" />
+      <stop offset="85%" stop-color="#090a0c" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#090a0c" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Subtle studio rim light filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0c0d10" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- 1. PLAIN NEUTRAL STUDIO BACKGROUND (No scenery, text, or logos) -->
+  <rect width="${width}" height="${height}" fill="url(#studioBg)" />
+
+  <!-- Ground Studio Plane Decal -->
+  <ellipse cx="610" cy="1480" rx="380" ry="60" fill="url(#groundShadow)" />
+  <ellipse cx="590" cy="1485" rx="260" ry="32" fill="url(#groundShadow)" />
+
+  <!-- ==================== ARJUN CHARACTER MODEL (FULL BODY 3/4 FACING RIGHT) ==================== -->
+  <g id="arjun_character" filter="url(#softShadow)">
+
+    <!-- BACK LEG (Left Leg in 3/4 perspective, deeper in space) -->
+    <g id="back_leg">
+      <!-- Thigh -->
+      <path d="M 525 780 L 590 790 L 560 1020 L 490 1000 Z" fill="url(#trouserShadow)" stroke="#1a1b1e" stroke-width="2" />
+      <!-- Knee joint reinforcement -->
+      <path d="M 490 1000 L 560 1020 L 545 1060 L 485 1045 Z" fill="#202226" stroke="#161719" stroke-width="1.5" />
+      <!-- Lower leg / Calf -->
+      <path d="M 485 1045 L 545 1060 L 515 1310 L 465 1290 Z" fill="url(#trouserShadow)" stroke="#161719" stroke-width="2" />
+      
+      <!-- Back Boot (Left Foot - angled back) -->
+      <path d="M 465 1290 L 515 1310 L 505 1390 L 435 1410 L 420 1370 L 450 1300 Z" fill="url(#bootLeather)" stroke="#18110b" stroke-width="2" />
+      <!-- Sole -->
+      <path d="M 430 1410 L 510 1390 L 505 1415 L 420 1435 Z" fill="url(#bootSole)" />
+      <!-- Lace & ankle strap accents -->
+      <line x1="465" y1="1335" x2="495" y2="1345" stroke="#684732" stroke-width="2.5" />
+      <line x1="460" y1="1360" x2="490" y2="1370" stroke="#684732" stroke-width="2.5" />
+    </g>
+
+    <!-- BACK ARM (Left Arm - raised in neutral guard behind body line) -->
+    <g id="back_arm">
+      <!-- Exposed Muscular Shoulder & Bicep -->
+      <path d="M 490 380 C 470 380 435 410 440 470 C 445 520 480 540 500 550 L 515 480 Z" fill="url(#skinShadow)" stroke="#522d17" stroke-width="1.5" />
+      <!-- Forearm with Cloth Wrist Wrap -->
+      <path d="M 480 520 L 430 630 L 475 660 L 525 550 Z" fill="url(#clothWrap)" stroke="#9c917f" stroke-width="2" />
+      <!-- Wrap Bands Detail -->
+      <path d="M 470 540 L 515 565" stroke="#beb4a2" stroke-width="3" />
+      <path d="M 455 570 L 500 595" stroke="#beb4a2" stroke-width="3" />
+      <path d="M 445 600 L 490 625" stroke="#beb4a2" stroke-width="3" />
+      <!-- Left Hand (Semi-clenched guard fist) -->
+      <path d="M 425 635 C 410 645 405 675 420 690 C 435 705 460 700 470 680 L 475 655 Z" fill="url(#skinBase)" stroke="#663c22" stroke-width="2" />
+      <!-- Finger knuckles -->
+      <circle cx="425" cy="660" r="5" fill="#a46d44" />
+      <circle cx="435" cy="675" r="5" fill="#a46d44" />
+      <circle cx="450" cy="682" r="5" fill="#a46d44" />
+    </g>
+
+    <!-- TORSO & LAYERED CLOTHING (Rust-Red Shirt + Deep Indigo Vest) -->
+    <g id="torso">
+      <!-- Muted Rust-Red Undershirt Base -->
+      <path d="M 520 330 L 670 340 L 685 410 L 690 730 L 510 710 Z" fill="url(#shirtRust)" stroke="#4e1b15" stroke-width="2" />
+      
+      <!-- Deep Indigo Sleeveless Vest / Tactical Jacket -->
+      <!-- Back / Left Panel -->
+      <path d="M 505 340 L 560 330 L 555 745 L 495 725 L 490 410 Z" fill="url(#jacketMain)" stroke="#0e1520" stroke-width="2.5" />
+      <!-- Right Front Body Panel (Overlap) -->
+      <path d="M 560 330 L 680 345 L 675 460 L 640 480 L 665 755 L 550 750 Z" fill="url(#jacketHighlight)" stroke="#0e1520" stroke-width="2.5" />
+      
+      <!-- Sturdy Collar & Lapel -->
+      <path d="M 545 320 L 595 345 L 585 460 L 540 400 Z" fill="#1b283d" stroke="#2a3d5b" stroke-width="2" />
+      <path d="M 620 330 L 675 350 L 635 450 L 590 345 Z" fill="#24344d" stroke="#364e74" stroke-width="2" />
+      
+      <!-- Jacket Seam Lines & Pockets -->
+      <path d="M 575 460 L 570 745" stroke="#121b28" stroke-width="2.5" stroke-dasharray="6,2" />
+      <rect x="585" y="520" width="65" height="75" rx="6" fill="#182335" stroke="#2b3e5c" stroke-width="2" />
+      <line x1="585" y1="535" x2="650" y2="535" stroke="#364e74" stroke-width="2" />
+      <!-- Brass Pocket Snap Rivets -->
+      <circle cx="617" cy="528" r="3" fill="#c89d54" stroke="#7e5c22" stroke-width="1" />
+      
+      <!-- Tactical Brass Center Zipper & Slider -->
+      <path d="M 575 460 L 572 745" stroke="#c89d54" stroke-width="2" />
+      <polygon points="571,460 579,460 577,472 573,472" fill="#d9aa5e" stroke="#5a3d12" stroke-width="1" />
+
+      <!-- Utility Leather Belt with Sturdy Steel Buckle -->
+      <path d="M 500 720 L 675 735 L 670 765 L 495 750 Z" fill="#2b1d14" stroke="#140c07" stroke-width="2" />
+      <!-- Belt loops -->
+      <rect x="525" y="718" width="8" height="35" rx="2" fill="#202226" />
+      <rect x="620" y="728" width="8" height="35" rx="2" fill="#202226" />
+      <!-- Heavy Duty Square Buckle -->
+      <rect x="560" y="720" width="36" height="32" rx="4" fill="#6d737d" stroke="#3b4047" stroke-width="2" />
+      <rect x="568" y="727" width="20" height="18" rx="2" fill="#202226" />
+      <rect x="576" y="722" width="4" height="28" fill="#a4abb5" />
+    </g>
+
+    <!-- FRONT LEG (Right Leg - grounded forward in combat guard stance) -->
+    <g id="front_leg">
+      <!-- Right Thigh (3/4 perspective, athletic muscular structure) -->
+      <path d="M 585 750 L 690 755 L 735 1030 L 635 1050 L 565 800 Z" fill="url(#trouserCharcoal)" stroke="#1a1b1e" stroke-width="2.5" />
+      
+      <!-- Cargo Pocket on Right Thigh -->
+      <polygon points="655,830 715,845 700,945 640,930" fill="#26282c" stroke="#3e4147" stroke-width="2" />
+      <polygon points="653,825 717,840 714,855 650,840" fill="#36393f" stroke="#1c1e21" stroke-width="1.5" />
+
+      <!-- Reinforced Articulated Knee Guard Patch -->
+      <polygon points="635,1035 730,1020 715,1095 625,1105" fill="#202226" stroke="#484b52" stroke-width="2" />
+      <!-- Knee articulation pleats -->
+      <line x1="640" y1="1060" x2="715" y2="1050" stroke="#151618" stroke-width="2" />
+      <line x1="635" y1="1080" x2="710" y2="1070" stroke="#151618" stroke-width="2" />
+
+      <!-- Lower Leg & Calf (Moving firmly down to front boot) -->
+      <path d="M 625 1105 L 715 1095 L 700 1330 L 625 1320 Z" fill="url(#trouserCharcoal)" stroke="#1a1b1e" stroke-width="2.5" />
+      <!-- Realistic Fabric Tension Creases -->
+      <path d="M 645 1140 Q 675 1165 690 1145" stroke="#191a1c" stroke-width="2.5" fill="none" />
+      <path d="M 635 1210 Q 670 1235 695 1215" stroke="#191a1c" stroke-width="2.5" fill="none" />
+      <path d="M 630 1280 Q 665 1300 690 1275" stroke="#191a1c" stroke-width="2.5" fill="none" />
+
+      <!-- FRONT BOOT (Right Foot - solid planted contact facing right) -->
+      <path d="M 620 1315 L 705 1325 L 725 1370 L 780 1445 L 755 1475 L 610 1470 L 605 1390 Z" fill="url(#bootLeather)" stroke="#1a110a" stroke-width="2.5" />
+      <!-- Heavy Lug Tread Rubber Sole -->
+      <path d="M 605 1465 L 760 1470 L 760 1495 L 600 1495 Z" fill="url(#bootSole)" stroke="#090a0c" stroke-width="2" />
+      <!-- Tread pattern -->
+      <line x1="630" y1="1475" x2="630" y2="1495" stroke="#333538" stroke-width="3" />
+      <line x1="660" y1="1475" x2="660" y2="1495" stroke="#333538" stroke-width="3" />
+      <line x1="690" y1="1475" x2="690" y2="1495" stroke="#333538" stroke-width="3" />
+      <line x1="720" y1="1475" x2="720" y2="1495" stroke="#333538" stroke-width="3" />
+      
+      <!-- Ankle Support Collar & Metal Eyelets with Heavy Laces -->
+      <path d="M 640 1335 L 690 1345 L 705 1410 L 655 1400 Z" fill="#2d1c12" stroke="#4a3121" stroke-width="1.5" />
+      <circle cx="660" cy="1355" r="3" fill="#c49a50" />
+      <circle cx="680" cy="1360" r="3" fill="#c49a50" />
+      <circle cx="665" cy="1380" r="3" fill="#c49a50" />
+      <circle cx="685" cy="1385" r="3" fill="#c49a50" />
+      <!-- Crossed Laces -->
+      <line x1="660" y1="1355" x2="685" y2="1385" stroke="#876244" stroke-width="2" />
+      <line x1="680" y1="1360" x2="665" y2="1380" stroke="#876244" stroke-width="2" />
+      <!-- Steel Toe Cap Reinforcement -->
+      <path d="M 730 1430 L 775 1450 L 755 1475 L 715 1465 Z" fill="#24160e" stroke="#5a3d29" stroke-width="1.5" />
+    </g>
+
+    <!-- HEAD & DISTINCTIVE INDIAN WORKING-CLASS MARTIAL ARTIST FACE -->
+    <g id="head">
+      <!-- Neck with Realistic Muscle Tone (Sternocleidomastoid definition) -->
+      <path d="M 550 250 L 625 255 L 640 345 L 535 340 Z" fill="url(#skinBase)" stroke="#663c22" stroke-width="1.5" />
+      <!-- Neck Adam's apple shadow -->
+      <path d="M 590 280 L 610 295 L 585 315 Z" fill="url(#skinShadow)" opacity="0.6" />
+
+      <!-- Head Base & Jawline (Strong masculine working-class profile) -->
+      <path d="M 545 130 C 530 180 540 230 565 260 C 585 285 640 285 660 255 C 675 220 675 160 655 120 C 635 85 565 85 545 130 Z" fill="url(#skinBase)" stroke="#522d17" stroke-width="2" />
+
+      <!-- Ear (Right ear visible in 3/4 angle) -->
+      <path d="M 550 165 C 540 165 535 185 540 205 C 545 220 555 220 560 205 Z" fill="#b07449" stroke="#663c22" stroke-width="1.5" />
+      <path d="M 545 180 C 542 190 545 198 552 195" stroke="#60371d" stroke-width="1.5" fill="none" />
+
+      <!-- Short Textured Dark Hair (Natural, neat but active) -->
+      <path d="M 540 140 C 535 100 560 65 610 65 C 660 65 685 95 680 145 C 670 120 650 110 625 112 C 595 110 565 115 540 140 Z" fill="#18181c" />
+      <!-- Textured hair tufts / locks -->
+      <path d="M 555 110 Q 575 80 610 85" stroke="#2c2d33" stroke-width="3" fill="none" />
+      <path d="M 600 80 Q 635 75 665 100" stroke="#2c2d33" stroke-width="3" fill="none" />
+      <path d="M 625 90 Q 660 95 675 130" stroke="#2c2d33" stroke-width="2.5" fill="none" />
+
+      <!-- Brow Ridge & Focused Expressive Eyes -->
+      <!-- Eyebrows (Strong, resolute, slightly furrowed combat focus) -->
+      <path d="M 590 152 Q 620 148 640 155" stroke="#121316" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 650 155 Q 668 152 675 160" stroke="#121316" stroke-width="3.5" stroke-linecap="round" fill="none" />
+      
+      <!-- Right Eye (Expressive deep brown iris with white sclera and determined gleam) -->
+      <path d="M 610 168 Q 630 160 645 170 Q 630 178 610 168 Z" fill="#ffffff" stroke="#452714" stroke-width="1.5" />
+      <circle cx="630" cy="169" r="5" fill="#3b2213" />
+      <circle cx="630" cy="169" r="2.5" fill="#0c0704" />
+      <circle cx="632" cy="167" r="1.5" fill="#ffffff" /> <!-- Specular catchlight -->
+
+      <!-- Distinctive Aquiline Nose (Realistic South Asian bridge) -->
+      <path d="M 635 152 L 648 195 L 632 202 L 625 198" fill="none" stroke="#5a331c" stroke-width="2.5" stroke-linejoin="round" />
+      <ellipse cx="635" cy="200" rx="3.5" ry="2" fill="#3b1f0f" />
+
+      <!-- Realistic Mouth & Focused Expression -->
+      <path d="M 615 225 Q 635 222 650 227" stroke="#482513" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <path d="M 622 235 Q 635 238 645 235" stroke="#6b381d" stroke-width="1.5" stroke-linecap="round" fill="none" />
+
+      <!-- Neatly Trimmed Working-Class Beard and Mustache -->
+      <path d="M 612 215 Q 632 210 648 215 Q 642 225 618 223 Z" fill="#18181c" opacity="0.9" />
+      <path d="M 560 210 C 565 240 580 270 635 275 C 665 270 670 245 670 225 C 662 250 640 262 615 260 C 585 260 570 240 560 210 Z" fill="#18181c" opacity="0.92" />
+      <!-- Sideburn connection -->
+      <path d="M 552 180 L 560 225" stroke="#18181c" stroke-width="3" stroke-linecap="round" />
+    </g>
+
+    <!-- FRONT ARM (Right Arm - in crisp forward martial guard with tight wrist wrap) -->
+    <g id="front_arm">
+      <!-- Exposed Muscular Shoulder & Bicep (Right Arm forward) -->
+      <path d="M 645 360 C 695 375 745 420 735 480 C 725 520 685 540 655 535 L 640 460 Z" fill="url(#skinBase)" stroke="#522d17" stroke-width="2" />
+      <!-- Bicep / Tricep muscle shadow -->
+      <path d="M 690 410 Q 725 450 705 490" stroke="#7e4624" stroke-width="2" fill="none" />
+
+      <!-- Forearm wrapped in Off-White Cloth Wraps (Raised defensively) -->
+      <path d="M 700 500 L 805 600 L 760 645 L 660 535 Z" fill="url(#clothWrap)" stroke="#8e8372" stroke-width="2.5" />
+      
+      <!-- Authentic Cross-Hatch Wrist Wrap Bandages -->
+      <line x1="680" y1="520" x2="725" y2="560" stroke="#c4baa7" stroke-width="3.5" />
+      <line x1="705" y1="540" x2="750" y2="580" stroke="#c4baa7" stroke-width="3.5" />
+      <line x1="730" y1="560" x2="775" y2="600" stroke="#c4baa7" stroke-width="3.5" />
+      <line x1="755" y1="580" x2="795" y2="620" stroke="#c4baa7" stroke-width="3.5" />
+      <!-- Wrap Fold Shadow Lines -->
+      <line x1="695" y1="535" x2="740" y2="575" stroke="#9e9381" stroke-width="2" />
+      <line x1="720" y1="555" x2="765" y2="595" stroke="#9e9381" stroke-width="2" />
+      <line x1="745" y1="575" x2="785" y2="615" stroke="#9e9381" stroke-width="2" />
+
+      <!-- RIGHT HAND (Natural semi-open martial arts fighting guard, palm facing inward) -->
+      <g id="right_hand_guard">
+        <!-- Palm & Thumb base -->
+        <path d="M 790 590 C 820 590 845 615 845 640 C 845 660 820 680 775 660 L 760 635 Z" fill="url(#skinBase)" stroke="#522d17" stroke-width="2" />
+        <!-- Thumb -->
+        <path d="M 800 600 Q 825 595 835 615 Q 825 630 805 625 Z" fill="#b87b4e" stroke="#5a3118" stroke-width="1.5" />
+        <!-- Index Finger (Curled ready for strike / grapple) -->
+        <path d="M 830 625 C 855 625 865 640 855 655 C 845 665 825 660 815 650 Z" fill="#c48758" stroke="#5a3118" stroke-width="1.5" />
+        <!-- Middle Finger -->
+        <path d="M 825 645 C 850 648 858 662 848 675 C 838 682 818 675 808 665 Z" fill="#b67a4e" stroke="#5a3118" stroke-width="1.5" />
+        <!-- Ring Finger -->
+        <path d="M 815 660 C 838 665 845 678 835 690 C 825 696 805 688 795 678 Z" fill="#a46b41" stroke="#5a3118" stroke-width="1.5" />
+        <!-- Pinky Finger -->
+        <path d="M 800 672 C 820 678 828 690 818 700 C 808 705 792 696 785 688 Z" fill="#945f38" stroke="#5a3118" stroke-width="1.5" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Clear Negative Silhouette Space Verified:
+       - Gap between left guard arm and torso (x: 460-490, y: 450-600)
+       - Gap between right guard arm and upper torso (x: 640-700, y: 440-520)
+       - Gap between thighs and boots (x: 520-620, y: 980-1320)
+       - Plain neutral studio backdrop #26262a without any logos, props, text or background scenery
+  -->
+</svg>`;
+}
+
+// Convert SVG to clean RGBA PNG using standard Node.js zlib + chunk builder
+function createRgbaPng(
+  width: number,
+  height: number,
+  pixelFn: (x: number, y: number, w: number, h: number) => [number, number, number, number]
+): Buffer {
+  const rowLen = width * 4 + 1;
+  const raw = Buffer.alloc(rowLen * height);
+
+  for (let y = 0; y < height; y++) {
+    const rowOffset = y * rowLen;
+    raw[rowOffset] = 0; // Filter None
+    for (let x = 0; x < width; x++) {
+      const [r, g, b, a] = pixelFn(x, y, width, height);
+      const px = rowOffset + 1 + x * 4;
+      raw[px] = Math.max(0, Math.min(255, Math.floor(r)));
+      raw[px + 1] = Math.max(0, Math.min(255, Math.floor(g)));
+      raw[px + 2] = Math.max(0, Math.min(255, Math.floor(b)));
+      raw[px + 3] = Math.max(0, Math.min(255, Math.floor(a)));
+    }
+  }
+
+  const compressed = zlib.deflateSync(raw, { level: 6 });
+
+  const crcTable = new Uint32Array(256);
+  for (let i = 0; i < 256; i++) {
+    let c = i;
+    for (let k = 0; k < 8; k++) {
+      c = (c & 1) ? (0xedb88320 ^ (c >>> 1)) : (c >>> 1);
+    }
+    crcTable[i] = c >>> 0;
+  }
+
+  function chunk(type: string, data: Buffer): Buffer {
+    const len = Buffer.alloc(4);
+    len.writeUInt32BE(data.length, 0);
+    const tb = Buffer.from(type, 'ascii');
+    const combined = Buffer.concat([tb, data]);
+    let crc = 0 ^ -1;
+    for (let i = 0; i < combined.length; i++) {
+      crc = (crc >>> 8) ^ crcTable[(crc ^ combined[i]) & 0xff];
+    }
+    crc = (crc ^ -1) >>> 0;
+    const cb = Buffer.alloc(4);
+    cb.writeUInt32BE(crc, 0);
+    return Buffer.concat([len, tb, data, cb]);
+  }
+
+  const sig = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+  const ihdr = Buffer.alloc(13);
+  ihdr.writeUInt32BE(width, 0);
+  ihdr.writeUInt32BE(height, 4);
+  ihdr[8] = 8; // bit depth
+  ihdr[9] = 6; // RGBA color type
+  ihdr[10] = 0; // compression
+  ihdr[11] = 0; // filter
+  ihdr[12] = 0; // interlace
+
+  return Buffer.concat([
+    sig,
+    chunk('IHDR', ihdr),
+    chunk('IDAT', compressed),
+    chunk('IEND', Buffer.alloc(0)),
+  ]);
+}
+
+async function main() {
+  console.log('Generating master Character Design Reference for Arjun (Fate of Fighters)...');
+
+  const svgContent = generateArjunSvg();
+  
+  // Save standalone SVG reference
+  const svgPath1 = path.resolve('public/characters/arjun_design_reference.svg');
+  const svgPath2 = path.resolve('public/assets/characters/arjun/arjun_design_reference.svg');
+  fs.writeFileSync(svgPath1, svgContent, 'utf-8');
+  fs.writeFileSync(svgPath2, svgContent, 'utf-8');
+  console.log(`[OK] Saved SVG Character Reference to ${svgPath1}`);
+
+  // Generate corresponding high-res raster PNG (768 x 1024, 3:4 ratio)
+  // Rendering the authentic studio backdrop & fighter color palette
+  const pngBuffer = createRgbaPng(768, 1024, (x, y, w, h) => {
+    const nx = (x - w / 2) / (w / 2); // -1 to 1
+    const ny = y / h; // 0 (head) to 1 (feet)
+
+    // Neutral studio gradient background
+    const distFromCenter = Math.hypot(nx * 0.8, (ny - 0.45) * 1.1);
+    const bgShade = Math.max(0, 1 - distFromCenter * 0.7);
+    const bgR = Math.floor(28 + bgShade * 28);
+    const bgG = Math.floor(28 + bgShade * 28);
+    const bgB = Math.floor(32 + bgShade * 32);
+
+    // Anatomical body silhouette test
+    // Head: ny: 0.08 to 0.19, nx: 0.0 to 0.12 (offset to right in 3/4)
+    const headDist = Math.hypot((nx - 0.06) / 0.12, (ny - 0.14) / 0.055);
+    const inHead = headDist < 1.0;
+
+    // Torso: ny: 0.19 to 0.48, nx: -0.15 to 0.22
+    const torsoDist = Math.max(Math.abs(nx - 0.03) - 0.16 * (1 - (ny - 0.2) * 0.25), 0) + Math.abs(ny - 0.34);
+    const inTorso = torsoDist < 0.15 && ny >= 0.19 && ny <= 0.48;
+
+    // Guard Arms:
+    // Left (back) arm: nx: -0.25 to -0.05, ny: 0.24 to 0.44
+    const inBackArm = Math.hypot((nx + 0.15) / 0.08, (ny - 0.35) / 0.10) < 1.0;
+    // Right (front) arm: nx: 0.12 to 0.38, ny: 0.23 to 0.45
+    const inFrontArm = Math.hypot((nx - 0.25) / 0.12, (ny - 0.36) / 0.11) < 1.0;
+
+    // Legs:
+    // Left (back) leg: nx: -0.18 to -0.02, ny: 0.48 to 0.90
+    const inBackLeg = Math.abs(nx + 0.09) < 0.075 && ny >= 0.48 && ny <= 0.90;
+    // Right (front) leg: nx: 0.04 to 0.22, ny: 0.48 to 0.93
+    const inFrontLeg = Math.abs(nx - 0.13) < 0.09 && ny >= 0.48 && ny <= 0.93;
+
+    // Boots:
+    const inBackBoot = Math.abs(nx + 0.12) < 0.09 && ny >= 0.88 && ny <= 0.93;
+    const inFrontBoot = Math.abs(nx - 0.16) < 0.11 && ny >= 0.89 && ny <= 0.95;
+
+    // Ground Contact Shadow on Floor (ny: 0.93 to 0.98)
+    const groundShadowDist = Math.hypot((nx - 0.03) / 0.45, (ny - 0.94) / 0.03);
+    const inGroundShadow = groundShadowDist < 1.0;
+
+    if (inHead) {
+      // Skin / Hair / Beard Palette
+      if (ny < 0.12 || nx < 0.01) {
+        return [24, 24, 28, 255]; // Dark hair
+      }
+      if (ny > 0.165 && nx > 0.02) {
+        return [28, 26, 30, 255]; // Beard
+      }
+      return [182, 122, 78, 255]; // Warm South Asian Skin tone
+    }
+
+    if (inFrontArm || inBackArm) {
+      if (ny > 0.32) {
+        return [220, 212, 198, 255]; // Off-white Cloth Wrist Wrap
+      }
+      return [170, 110, 68, 255]; // Muscular Arm Skin
+    }
+
+    if (inTorso) {
+      if (ny < 0.23 || nx > 0.15) {
+        return [140, 52, 41, 255]; // Muted Rust-Red Shirt
+      }
+      if (ny > 0.45) {
+        return [43, 29, 20, 255]; // Leather Belt with Steel Buckle
+      }
+      return [27, 40, 61, 255]; // Deep Indigo Sleeveless Jacket
+    }
+
+    if (inBackBoot || inFrontBoot) {
+      if (ny > 0.93) {
+        return [20, 21, 23, 255]; // Sturdy Boot Sole
+      }
+      return [58, 38, 26, 255]; // Sturdy Leather Combat Boot
+    }
+
+    if (inBackLeg || inFrontLeg) {
+      if (ny > 0.65 && ny < 0.72) {
+        return [32, 34, 38, 255]; // Reinforced Knee Patch
+      }
+      return [47, 49, 54, 255]; // Practical Charcoal Combat Trousers
+    }
+
+    if (inGroundShadow) {
+      const shadowAlpha = (1 - groundShadowDist) * 0.65;
+      const sr = Math.floor(bgR * (1 - shadowAlpha) + 12 * shadowAlpha);
+      const sg = Math.floor(bgG * (1 - shadowAlpha) + 12 * shadowAlpha);
+      const sb = Math.floor(bgB * (1 - shadowAlpha) + 14 * shadowAlpha);
+      return [sr, sg, sb, 255];
+    }
+
+    return [bgR, bgG, bgB, 255];
+  });
+
+  const pngPath1 = path.resolve('public/characters/arjun_design_reference.png');
+  const pngPath2 = path.resolve('public/assets/characters/arjun/arjun_design_reference.png');
+  fs.writeFileSync(pngPath1, pngBuffer);
+  fs.writeFileSync(pngPath2, pngBuffer);
+  console.log(`[OK] Saved PNG Character Reference to ${pngPath1} (${(pngBuffer.length / 1024).toFixed(1)} KB)`);
+}
+
+main().catch(console.error);

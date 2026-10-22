@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="elenaBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#034e6e" />
+      <stop offset="50%" stop-color="#022839" />
+      <stop offset="100%" stop-color="#010e14" />
+    </radialGradient>
+
+    <filter id="neonSky" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blurS" />
+      <feMerge>
+        <feMergeNode in="blurS" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="elenaHair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="elenaSkin" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fce7db" />
+      <stop offset="50%" stop-color="#f8cfbb" />
+      <stop offset="100%" stop-color="#e09a7d" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#elenaBg)" />
+
+  <!-- Medical / Energy Cross Grid in Background -->
+  <g opacity="0.18" stroke="#38bdf8" stroke-width="1.2" fill="none">
+    <circle cx="256" cy="240" r="185" stroke-dasharray="8 6" />
+    <polygon points="256,60 286,77 286,112 256,129 226,112 226,77" />
+    <path d="M 246 200 L 266 200 M 256 190 L 256 210" stroke-width="2" />
+  </g>
+
+  <!-- Tactical Vest -->
+  <g id="body">
+    <path d="M 180 370 L 150 512 L 362 512 L 332 370 Z" fill="#0c4a6e" />
+    <path d="M 80 445 L 180 370 L 170 512 L 70 512 Z" fill="#082f49" stroke="#0284c7" stroke-width="2" />
+    <path d="M 432 445 L 332 370 L 342 512 L 442 512 Z" fill="#082f49" stroke="#0284c7" stroke-width="2" />
+    <path d="M 256 360 L 256 512" stroke="#38bdf8" stroke-width="2.5" filter="url(#neonSky)" />
+  </g>
+
+  <!-- Neck -->
+  <path d="M 226 270 L 226 335 L 286 335 L 286 270 Z" fill="url(#elenaSkin)" />
+
+  <!-- Face -->
+  <g id="head">
+    <path d="M 192 175 C 190 238 206 285 256 308 C 306 285 322 238 320 175 C 320 125 298 108 256 108 C 214 108 192 125 192 175 Z"
+          fill="url(#elenaSkin)" stroke="#38bdf8" stroke-width="1.2" />
+
+    <!-- Eyes -->
+    <ellipse cx="225" cy="190" rx="16" ry="8" fill="#ffffff" />
+    <circle cx="227" cy="190" r="6" fill="#082f49" />
+    <circle cx="227" cy="190" r="3.5" fill="#38bdf8" />
+    <ellipse cx="287" cy="190" rx="16" ry="8" fill="#ffffff" />
+    <circle cx="285" cy="190" r="6" fill="#082f49" />
+    <circle cx="285" cy="190" r="3.5" fill="#38bdf8" />
+
+    <path d="M 205 174 Q 224 167 242 178" stroke="#082f49" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 307 174 Q 288 167 270 178" stroke="#082f49" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 240 248 Q 256 256 274 246" stroke="#be123c" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Platinum Braided Ponytail -->
+  <path d="M 180 160 C 172 80 205 45 256 45 C 310 45 342 80 332 160 C 315 110 295 90 256 95 C 218 90 198 110 180 160 Z"
+        fill="url(#elenaHair)" />
+  <path d="M 230 65 L 256 15 L 282 65 Z" fill="url(#elenaHair)" />
+  <rect x="3" y="3" width="506" height="506" rx="20" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.85" filter="url(#neonSky)" />
+</svg>

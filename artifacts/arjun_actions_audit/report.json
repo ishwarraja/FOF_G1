@@ -1,0 +1,318 @@
+{
+  "characterId": "arjun",
+  "metadata_file": "public/assets/characters/arjun/actions/actions.json",
+  "action_count": 18,
+  "errors": [],
+  "warnings": [
+    "crouch: suspected low animation variety (1/5 exact unique frames; 100.0% adjacent transitions below 0.015)"
+  ],
+  "actions": [
+    {
+      "action": "idle",
+      "image": "public/assets/characters/arjun/actions/idle.png",
+      "actual_size": [
+        2048,
+        448
+      ],
+      "metadata_frame_count": 8,
+      "cropped_frame_count": 8,
+      "exact_unique_frames": 7,
+      "low_change_transitions": 0,
+      "transition_count": 7,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/idle_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/idle_preview.gif"
+    },
+    {
+      "action": "walk_forward",
+      "image": "public/assets/characters/arjun/actions/walk_forward.png",
+      "actual_size": [
+        2048,
+        448
+      ],
+      "metadata_frame_count": 8,
+      "cropped_frame_count": 8,
+      "exact_unique_frames": 7,
+      "low_change_transitions": 0,
+      "transition_count": 7,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/walk_forward_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/walk_forward_preview.gif"
+    },
+    {
+      "action": "walk_backward",
+      "image": "public/assets/characters/arjun/actions/walk_backward.png",
+      "actual_size": [
+        2048,
+        448
+      ],
+      "metadata_frame_count": 8,
+      "cropped_frame_count": 8,
+      "exact_unique_frames": 7,
+      "low_change_transitions": 0,
+      "transition_count": 7,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/walk_backward_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/walk_backward_preview.gif"
+    },
+    {
+      "action": "crouch",
+      "image": "public/assets/characters/arjun/actions/crouch.png",
+      "actual_size": [
+        1280,
+        448
+      ],
+      "metadata_frame_count": 5,
+      "cropped_frame_count": 5,
+      "exact_unique_frames": 1,
+      "low_change_transitions": 4,
+      "transition_count": 4,
+      "low_change_percent": 100.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/crouch_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/crouch_preview.gif"
+    },
+    {
+      "action": "light_punch",
+      "image": "public/assets/characters/arjun/actions/light_punch.png",
+      "actual_size": [
+        2304,
+        448
+      ],
+      "metadata_frame_count": 9,
+      "cropped_frame_count": 9,
+      "exact_unique_frames": 6,
+      "low_change_transitions": 2,
+      "transition_count": 8,
+      "low_change_percent": 25.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/light_punch_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/light_punch_preview.gif"
+    },
+    {
+      "action": "heavy_punch",
+      "image": "public/assets/characters/arjun/actions/heavy_punch.png",
+      "actual_size": [
+        3328,
+        448
+      ],
+      "metadata_frame_count": 13,
+      "cropped_frame_count": 13,
+      "exact_unique_frames": 11,
+      "low_change_transitions": 1,
+      "transition_count": 12,
+      "low_change_percent": 8.33,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/heavy_punch_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/heavy_punch_preview.gif"
+    },
+    {
+      "action": "light_kick",
+      "image": "public/assets/characters/arjun/actions/light_kick.png",
+      "actual_size": [
+        2304,
+        448
+      ],
+      "metadata_frame_count": 9,
+      "cropped_frame_count": 9,
+      "exact_unique_frames": 6,
+      "low_change_transitions": 2,
+      "transition_count": 8,
+      "low_change_percent": 25.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/light_kick_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/light_kick_preview.gif"
+    },
+    {
+      "action": "heavy_kick",
+      "image": "public/assets/characters/arjun/actions/heavy_kick.png",
+      "actual_size": [
+        3584,
+        448
+      ],
+      "metadata_frame_count": 14,
+      "cropped_frame_count": 14,
+      "exact_unique_frames": 12,
+      "low_change_transitions": 2,
+      "transition_count": 13,
+      "low_change_percent": 15.38,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/heavy_kick_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/heavy_kick_preview.gif"
+    },
+    {
+      "action": "special_1",
+      "image": "public/assets/characters/arjun/actions/special_1.png",
+      "actual_size": [
+        3840,
+        448
+      ],
+      "metadata_frame_count": 15,
+      "cropped_frame_count": 15,
+      "exact_unique_frames": 14,
+      "low_change_transitions": 1,
+      "transition_count": 14,
+      "low_change_percent": 7.14,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/special_1_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/special_1_preview.gif"
+    },
+    {
+      "action": "special_2",
+      "image": "public/assets/characters/arjun/actions/special_2.png",
+      "actual_size": [
+        4352,
+        448
+      ],
+      "metadata_frame_count": 17,
+      "cropped_frame_count": 17,
+      "exact_unique_frames": 16,
+      "low_change_transitions": 1,
+      "transition_count": 16,
+      "low_change_percent": 6.25,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/special_2_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/special_2_preview.gif"
+    },
+    {
+      "action": "special_3",
+      "image": "public/assets/characters/arjun/actions/special_3.png",
+      "actual_size": [
+        4096,
+        448
+      ],
+      "metadata_frame_count": 16,
+      "cropped_frame_count": 16,
+      "exact_unique_frames": 15,
+      "low_change_transitions": 1,
+      "transition_count": 15,
+      "low_change_percent": 6.67,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/special_3_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/special_3_preview.gif"
+    },
+    {
+      "action": "special_4",
+      "image": "public/assets/characters/arjun/actions/special_4.png",
+      "actual_size": [
+        6144,
+        448
+      ],
+      "metadata_frame_count": 24,
+      "cropped_frame_count": 24,
+      "exact_unique_frames": 22,
+      "low_change_transitions": 3,
+      "transition_count": 23,
+      "low_change_percent": 13.04,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/special_4_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/special_4_preview.gif"
+    },
+    {
+      "action": "jump",
+      "image": "public/assets/characters/arjun/actions/jump.png",
+      "actual_size": [
+        2560,
+        448
+      ],
+      "metadata_frame_count": 10,
+      "cropped_frame_count": 10,
+      "exact_unique_frames": 9,
+      "low_change_transitions": 0,
+      "transition_count": 9,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/jump_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/jump_preview.gif"
+    },
+    {
+      "action": "block",
+      "image": "public/assets/characters/arjun/actions/block.png",
+      "actual_size": [
+        1792,
+        448
+      ],
+      "metadata_frame_count": 7,
+      "cropped_frame_count": 7,
+      "exact_unique_frames": 4,
+      "low_change_transitions": 0,
+      "transition_count": 6,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/block_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/block_preview.gif"
+    },
+    {
+      "action": "hurt_high",
+      "image": "public/assets/characters/arjun/actions/hurt_high.png",
+      "actual_size": [
+        2048,
+        448
+      ],
+      "metadata_frame_count": 8,
+      "cropped_frame_count": 8,
+      "exact_unique_frames": 6,
+      "low_change_transitions": 0,
+      "transition_count": 7,
+      "low_change_percent": 0.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/hurt_high_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/hurt_high_preview.gif"
+    },
+    {
+      "action": "hurt_low",
+      "image": "public/assets/characters/arjun/actions/hurt_low.png",
+      "actual_size": [
+        2048,
+        448
+      ],
+      "metadata_frame_count": 8,
+      "cropped_frame_count": 8,
+      "exact_unique_frames": 4,
+      "low_change_transitions": 1,
+      "transition_count": 7,
+      "low_change_percent": 14.29,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/hurt_low_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/hurt_low_preview.gif"
+    },
+    {
+      "action": "knockdown",
+      "image": "public/assets/characters/arjun/actions/knockdown.png",
+      "actual_size": [
+        3328,
+        448
+      ],
+      "metadata_frame_count": 13,
+      "cropped_frame_count": 13,
+      "exact_unique_frames": 10,
+      "low_change_transitions": 3,
+      "transition_count": 12,
+      "low_change_percent": 25.0,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/knockdown_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/knockdown_preview.gif"
+    },
+    {
+      "action": "ko",
+      "image": "public/assets/characters/arjun/actions/ko.png",
+      "actual_size": [
+        4608,
+        448
+      ],
+      "metadata_frame_count": 18,
+      "cropped_frame_count": 18,
+      "exact_unique_frames": 16,
+      "low_change_transitions": 2,
+      "transition_count": 17,
+      "low_change_percent": 11.76,
+      "diagnostic_gif_exists": true,
+      "contact_sheet": "artifacts/arjun_actions_audit/ko_contact.png",
+      "preview_gif": "artifacts/arjun_actions_audit/ko_preview.gif"
+    }
+  ],
+  "note": "Low-change warnings are heuristic. A human should inspect contact sheets; this script does not judge whether poses are anatomically correct."
+}

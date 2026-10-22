@@ -1,0 +1,1472 @@
+{
+  "characterId": "elena",
+  "characterName": "Dr. Elena Vance",
+  "standardFps": 60,
+  "frameWidth": 192,
+  "frameHeight": 192,
+  "actions": {
+    "idle": {
+      "actionName": "idle",
+      "isLooping": true,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/idle.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 0,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 0,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 1,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 2,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 3,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 4,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 5,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "walk_forward": {
+      "actionName": "walk_forward",
+      "isLooping": true,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/walk_forward.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 0,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 6,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 7,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 8,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 9,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 10,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 11,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "walk_backward": {
+      "actionName": "walk_backward",
+      "isLooping": true,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/walk_backward.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 0,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 12,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 13,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 14,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 15,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 16,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 17,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "crouch_idle": {
+      "actionName": "crouch_idle",
+      "isLooping": true,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/crouch_idle.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 0,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 18,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 19,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 20,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 21,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "jump": {
+      "actionName": "jump",
+      "isLooping": false,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/jump.gif",
+      "startupFrames": 2,
+      "activeFrames": 2,
+      "recoveryFrames": 2,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 22,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 23,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 24,
+          "durationMs": 75,
+          "isActive": true,
+          "hitbox": {
+            "x": 60,
+            "y": 75,
+            "w": 50,
+            "h": 30
+          },
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 25,
+          "durationMs": 75,
+          "isActive": true,
+          "hitbox": {
+            "x": 60,
+            "y": 75,
+            "w": 50,
+            "h": 30
+          },
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 26,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 27,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "block": {
+      "actionName": "block",
+      "isLooping": true,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/block.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 0,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 28,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 29,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 30,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 31,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "punch_light": {
+      "actionName": "punch_light",
+      "isLooping": false,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/punch_light.gif",
+      "startupFrames": 4,
+      "activeFrames": 3,
+      "recoveryFrames": 5,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 32,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 33,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 34,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 35,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "punch_heavy": {
+      "actionName": "punch_heavy",
+      "isLooping": false,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/punch_heavy.gif",
+      "startupFrames": 7,
+      "activeFrames": 5,
+      "recoveryFrames": 12,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 36,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 37,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 38,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 39,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 40,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 41,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "kick_light": {
+      "actionName": "kick_light",
+      "isLooping": false,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/kick_light.gif",
+      "startupFrames": 4,
+      "activeFrames": 4,
+      "recoveryFrames": 6,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 42,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 43,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 44,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 45,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "kick_heavy": {
+      "actionName": "kick_heavy",
+      "isLooping": false,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/kick_heavy.gif",
+      "startupFrames": 8,
+      "activeFrames": 5,
+      "recoveryFrames": 14,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 46,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 47,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 48,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 49,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 50,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 51,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "special_1": {
+      "actionName": "special_1",
+      "isLooping": false,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/special_1.gif",
+      "startupFrames": 9,
+      "activeFrames": 5,
+      "recoveryFrames": 15,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 52,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 53,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 54,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 55,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 56,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 57,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "special_2": {
+      "actionName": "special_2",
+      "isLooping": false,
+      "frameCount": 7,
+      "gifUrl": "/assets/characters/elena/actions/special_2.gif",
+      "startupFrames": 6,
+      "activeFrames": 8,
+      "recoveryFrames": 21,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 58,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 59,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 60,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 61,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 62,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 63,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 6,
+          "sheetIndex": 64,
+          "durationMs": 75,
+          "isActive": true,
+          "hitbox": {
+            "x": 50,
+            "y": 88,
+            "w": 68,
+            "h": 88
+          },
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "special_3": {
+      "actionName": "special_3",
+      "isLooping": false,
+      "frameCount": 7,
+      "gifUrl": "/assets/characters/elena/actions/special_3.gif",
+      "startupFrames": 12,
+      "activeFrames": 10,
+      "recoveryFrames": 18,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 65,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 66,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 67,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 68,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 69,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 70,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 6,
+          "sheetIndex": 71,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "hurt_high": {
+      "actionName": "hurt_high",
+      "isLooping": false,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/hurt_high.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 4,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 72,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 73,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 74,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 75,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "hurt_low": {
+      "actionName": "hurt_low",
+      "isLooping": false,
+      "frameCount": 4,
+      "gifUrl": "/assets/characters/elena/actions/hurt_low.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 4,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 76,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 77,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 78,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 79,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "knockdown": {
+      "actionName": "knockdown",
+      "isLooping": false,
+      "frameCount": 6,
+      "gifUrl": "/assets/characters/elena/actions/knockdown.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 6,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 80,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 81,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 82,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 83,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 84,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 5,
+          "sheetIndex": 85,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    },
+    "ko": {
+      "actionName": "ko",
+      "isLooping": false,
+      "frameCount": 5,
+      "gifUrl": "/assets/characters/elena/actions/ko.gif",
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "recoveryFrames": 5,
+      "frames": [
+        {
+          "frameIndex": 0,
+          "sheetIndex": 86,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 1,
+          "sheetIndex": 87,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 2,
+          "sheetIndex": 88,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 3,
+          "sheetIndex": 89,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        },
+        {
+          "frameIndex": 4,
+          "sheetIndex": 90,
+          "durationMs": 75,
+          "isActive": false,
+          "hitbox": null,
+          "hurtbox": {
+            "x": 30,
+            "y": 20,
+            "w": 50,
+            "h": 140
+          }
+        }
+      ]
+    }
+  },
+  "spriteSheet": {
+    "url": "/assets/characters/elena/actions/spritesheet.png",
+    "width": 3072,
+    "height": 1152,
+    "cols": 16,
+    "rows": 6,
+    "totalFrames": 91,
+    "actionOffsets": {
+      "idle": {
+        "startSheetIndex": 0,
+        "frameCount": 6
+      },
+      "walk_forward": {
+        "startSheetIndex": 6,
+        "frameCount": 6
+      },
+      "walk_backward": {
+        "startSheetIndex": 12,
+        "frameCount": 6
+      },
+      "crouch_idle": {
+        "startSheetIndex": 18,
+        "frameCount": 4
+      },
+      "jump": {
+        "startSheetIndex": 22,
+        "frameCount": 6
+      },
+      "block": {
+        "startSheetIndex": 28,
+        "frameCount": 4
+      },
+      "punch_light": {
+        "startSheetIndex": 32,
+        "frameCount": 4
+      },
+      "punch_heavy": {
+        "startSheetIndex": 36,
+        "frameCount": 6
+      },
+      "kick_light": {
+        "startSheetIndex": 42,
+        "frameCount": 4
+      },
+      "kick_heavy": {
+        "startSheetIndex": 46,
+        "frameCount": 6
+      },
+      "special_1": {
+        "startSheetIndex": 52,
+        "frameCount": 6
+      },
+      "special_2": {
+        "startSheetIndex": 58,
+        "frameCount": 7
+      },
+      "special_3": {
+        "startSheetIndex": 65,
+        "frameCount": 7
+      },
+      "hurt_high": {
+        "startSheetIndex": 72,
+        "frameCount": 4
+      },
+      "hurt_low": {
+        "startSheetIndex": 76,
+        "frameCount": 4
+      },
+      "knockdown": {
+        "startSheetIndex": 80,
+        "frameCount": 6
+      },
+      "ko": {
+        "startSheetIndex": 86,
+        "frameCount": 5
+      }
+    }
+  }
+}
